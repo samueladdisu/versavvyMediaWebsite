@@ -1,0 +1,124 @@
+@import "reboot";
+@import "mixins";
+@import "utilities";
+
+.header{
+    position: relative;
+    height: auto;
+    background-color: $primary-color;
+    overflow: visible;
+  nav{
+       
+        transition: all 0.3s linear;
+        padding-bottom: 1rem;
+        z-index: 999999;
+        .container{
+            .nav-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 1.24rem;
+                .logo{
+                width: 16rem;
+                }
+                
+            }
+            @include responsive($md){
+              .nav-header{
+                    display: flex;
+                    .logo{
+                        flex: 1;
+                    }
+                    .ham{
+                        font-size: 4rem;
+                    }
+                
+                }
+            }
+        }
+    }
+  .links-container{
+    background: #fff;
+    height: 0;
+    z-index: 999999;
+    position: relative;
+    transition: all 0.3s linear;
+    .nav-links{
+        
+      li{
+      padding: 0.75rem 1rem;
+      
+      }
+      .drop-down{
+        padding: 0.75rem 1rem;
+        height: auto;
+          .drop-down-link{
+            background-color: #fff;
+            box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
+            z-index: 99999999; 
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            border-radius: 3px;
+            
+            li{
+                a{
+                    color: #000 !important;
+                }
+            }
+          }
+        a{
+            color: #fff;
+        }
+      }
+    }
+  }
+  .show-links{
+    height: auto !important;
+  }
+  .fixed-nav{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999999;
+  }
+  @include responsive($xl){
+      .nav{
+        padding-top: 1.24rem;
+        .container{
+          display: flex;
+          align-items: center;
+          .nav-header{
+            flex: 1;
+            padding: 0;
+            .menu{
+              display: none;
+            }
+          }
+          .links-container{
+            flex: 1;
+            background: transparent;
+            height: auto;
+            .nav-links{
+              display: flex;
+              justify-content: space-between;
+              li{
+                a{
+                  color: #fff;
+                  transition: all .3s linear;
+                }
+                .black{
+                  color: #000;
+                }
+              }
+              
+            }
+            
+          }
+        }
+    }
+}
+}
