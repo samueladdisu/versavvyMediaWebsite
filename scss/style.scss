@@ -2,16 +2,21 @@
 @import "mixins";
 @import "utilities";
 
+
+
+// header and navigation 
+
+
+
 .header{
-    position: relative;
-    height: auto;
+    height: 7rem;
     background-color: $primary-color;
-    overflow: visible;
+    z-index: 999999;
   nav{
-       
         transition: all 0.3s linear;
         padding-bottom: 1rem;
-        z-index: 999999;
+        position: relative;
+        
         .container{
             .nav-header{
                 display: flex;
@@ -39,9 +44,11 @@
     }
   .links-container{
     background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
     height: 0;
-    z-index: 999999;
-    position: relative;
+    overflow: hidden;
     transition: all 0.3s linear;
     .nav-links{
         
@@ -52,39 +59,43 @@
       .drop-down{
         padding: 0.75rem 1rem;
         height: auto;
+          
           .drop-down-link{
             background-color: #fff;
-            box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
-            z-index: 99999999; 
-            position: absolute;
-            top: 100%;
-            left: 0%;
             border-radius: 3px;
+            display: none;
             
             li{
                 a{
                     color: #000 !important;
                 }
             }
+
           }
-        a{
-            color: #fff;
-        }
+          @include responsive($md){
+            .drop-down-link{
+                position: absolute;
+                box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
+                
+            }
+          }
+          .display-links{
+            display: block !important;  
+          }
+        
       }
     }
+
+  }
+  @include responsive($md){
+      .links-container{
+          position: static;
+      }
   }
   .show-links{
     height: auto !important;
   }
-  .fixed-nav{
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 999999;
-  }
+  
   @include responsive($xl){
       .nav{
         padding-top: 1.24rem;
@@ -121,4 +132,86 @@
         }
     }
 }
+}
+
+
+
+// banner section
+
+
+.banner {
+    height: 26.75rem;
+    background: rgba(0, 0, 0, 0.37) url('../assets/banner2.jpg') no-repeat;
+    background-position:  center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .headline{
+        text-align: center;
+        .headline-title{
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2.31rem;
+        }
+    }
+}
+
+@include responsive($md){
+    .banner{
+        justify-content: flex-start;
+        .headline{
+            text-align: left;
+            .headline-title{
+                width: 20.94rem;
+                font-size: 2.25rem;
+                margin-bottom: 1.94rem;
+            }
+        }
+    }
+}
+
+@include responsive($xl){
+    .banner{
+        height: 43.13rem;
+        .headline{
+            .headline-title{
+                font-size: 3.81rem;
+                width: 34.88rem;
+            }
+            .cta{
+                padding: 1rem 3.5rem;
+                font-size: 1.13rem;
+            }
+        }
+    }
+}
+
+// social proof 
+
+.logos{
+    background: $gray-color;
+    padding: 1.5rem 0 1.75rem;
+    .logo-title{
+        color: $dark-gray-color;
+        text-align: center;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+        .logo-container{
+           display: flex;
+           align-items: center;
+            overflow: scroll;
+               
+               img{
+                   margin-right: 4.69rem;
+               }
+         
+        }
+    
 }

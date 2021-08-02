@@ -305,7 +305,6 @@ template {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 html {
@@ -762,17 +761,27 @@ html {
   color: #fff;
 }
 
+.btn-outline-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: #A0C6FF;
+}
+
+.btn-outline-secondary:hover {
+  background: #A0C6FF;
+  color: #004063;
+}
+
 .header {
-  position: relative;
-  height: auto;
+  height: 7rem;
   background-color: #004063;
-  overflow: visible;
+  z-index: 999999;
 }
 
 .header nav {
   transition: all 0.3s linear;
   padding-bottom: 1rem;
-  z-index: 999999;
+  position: relative;
 }
 
 .header nav .container .nav-header {
@@ -800,9 +809,11 @@ html {
 
 .header .links-container {
   background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
   height: 0;
-  z-index: 999999;
-  position: relative;
+  overflow: hidden;
   transition: all 0.3s linear;
 }
 
@@ -817,34 +828,33 @@ html {
 
 .header .links-container .nav-links .drop-down .drop-down-link {
   background-color: #fff;
-  box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
-  z-index: 99999999;
-  position: absolute;
-  top: 100%;
-  left: 0%;
   border-radius: 3px;
+  display: none;
 }
 
 .header .links-container .nav-links .drop-down .drop-down-link li a {
   color: #000 !important;
 }
 
-.header .links-container .nav-links .drop-down a {
-  color: #fff;
+@media screen and (min-width: 768px) {
+  .header .links-container .nav-links .drop-down .drop-down-link {
+    position: absolute;
+    box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.header .links-container .nav-links .drop-down .display-links {
+  display: block !important;
+}
+
+@media screen and (min-width: 768px) {
+  .header .links-container {
+    position: static;
+  }
 }
 
 .header .show-links {
   height: auto !important;
-}
-
-.header .fixed-nav {
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  z-index: 999999;
 }
 
 @media screen and (min-width: 1200px) {
@@ -878,5 +888,79 @@ html {
   .header .nav .container .links-container .nav-links li .black {
     color: #000;
   }
+}
+
+.banner {
+  height: 26.75rem;
+  background: rgba(0, 0, 0, 0.37) url("../assets/banner2.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .headline {
+  text-align: center;
+}
+
+.banner .headline .headline-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.31rem;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    justify-content: flex-start;
+  }
+  .banner .headline {
+    text-align: left;
+  }
+  .banner .headline .headline-title {
+    width: 20.94rem;
+    font-size: 2.25rem;
+    margin-bottom: 1.94rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner {
+    height: 43.13rem;
+  }
+  .banner .headline .headline-title {
+    font-size: 3.81rem;
+    width: 34.88rem;
+  }
+  .banner .headline .cta {
+    padding: 1rem 3.5rem;
+    font-size: 1.13rem;
+  }
+}
+
+.logos {
+  background: #EDEDED;
+  padding: 1.5rem 0 1.75rem;
+}
+
+.logos .logo-title {
+  color: #867979;
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos .logo-container {
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+}
+
+.logos .logo-container img {
+  margin-right: 4.69rem;
 }
 /*# sourceMappingURL=style.css.map */
