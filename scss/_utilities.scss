@@ -9,16 +9,16 @@ $primary-color: #004063;
 $secondary-color: #A0C6FF;
 $gray-color: #EDEDED;
 $dark-gray-color: #867979;
-
+$light-gray-color: #dfdfdf;
+$trans: all 0.1s linear;
 html{
   font-family: 'Rubik', sans-serif;
 }
 // Gird system
 .container {
   width: 100% - 10%;
-  // max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  overflow: auto;
 }
 .row {
   display: flex;

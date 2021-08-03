@@ -313,8 +313,8 @@ html {
 
 .container {
   width: 90%;
+  max-width: 1440px;
   margin: 0 auto;
-  overflow: auto;
 }
 
 .row {
@@ -942,25 +942,202 @@ html {
 
 .logos {
   background: #EDEDED;
-  padding: 1.5rem 0 1.75rem;
 }
 
 .logos .logo-title {
+  padding-top: 1.5rem;
+  padding-bottom: 1.4rem;
   color: #867979;
-  text-align: center;
-  font-size: 1rem;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .logos .logo-container {
   display: flex;
   align-items: center;
-  overflow: scroll;
+  overflow-x: scroll;
+  margin-bottom: 1.75rem;
+  margin-top: 1.44rem;
 }
 
-.logos .logo-container img {
-  margin-right: 4.69rem;
+.section-title {
+  font-size: 1.88rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #004063;
+  margin-top: 2.38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  margin-top: 0.94rem;
+  width: 4.38rem;
+  height: 0.13rem;
+  background: #A0C6FF;
+}
+
+.section-desc {
+  font-size: 1.13rem;
+  text-align: center;
+  width: 17.63rem;
+  margin: 0 auto;
+  margin-top: 1.44rem;
+  margin-bottom: 4.13rem;
+}
+
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-desc {
+    width: 26.13rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .section-title {
+    font-size: 3.25rem;
+  }
+  .section-desc {
+    font-size: 1.25rem;
+    width: auto;
+  }
+}
+
+.solutions-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.solutions-card .card {
+  height: 25.56rem;
+  width: 18.81rem;
+  border-radius: 0.81rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.solutions-card .card .bg-card {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+.solutions-card .card .card-content {
+  height: 11.25rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  background: #004063;
+  color: #fff;
+  transition: height .3s linear;
+}
+
+.solutions-card .card .card-content h3 {
+  font-size: 1.25rem;
+}
+
+.solutions-card .card .card-content ul {
+  margin-top: 1.06rem;
+  margin-bottom: 1.13rem;
+}
+
+.solutions-card .card .card-content ul li {
+  color: #dfdfdf;
+  display: flex;
+  align-items: center;
+  gap: 0.56rem;
+  margin-bottom: 1rem;
+}
+
+.solutions-card .card .card-content a {
+  visibility: hidden;
+}
+
+.solutions-card .card .card-content:hover {
+  height: auto;
+}
+
+.solutions-card .card .card-content:hover a {
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .solutions-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .solutions-card .card5 {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .solutions-card {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .solutions-card .card4 {
+    margin-left: 45%;
+  }
+}
+
+.benefits {
+  background: url("../assets/IPTV.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.benefits .container {
+  text-align: center;
+  z-index: 99;
+  color: #fff;
+}
+
+.benefits .container .section-title {
+  color: #fff;
+  padding-top: 3.19rem;
+}
+
+.benefits .container p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.005em;
+  margin-top: 2.75rem;
+  margin-bottom: 1.69rem;
+}
+
+.benefits .container a {
+  margin-bottom: 3rem;
+  z-index: 100;
+}
+
+.benefits::before {
+  z-index: -199999;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(98.99deg, rgba(10, 75, 94, 0.87) 0%, rgba(18, 109, 158, 0.78) 123.67%);
+}
+
+.footer {
+  height: 50vh;
 }
 /*# sourceMappingURL=style.css.map */
