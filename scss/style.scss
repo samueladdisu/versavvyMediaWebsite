@@ -200,16 +200,42 @@
         display: flex;
         justify-content: center;
     }
-    .logo-container{
-        display: flex;
-        align-items: center;
-        overflow-x: scroll;
-        margin-bottom: 1.75rem;
-        margin-top: 1.44rem;
+    .brands{
         
-    }
-}
+        overflow: scroll;
+        .container{
+            .logo-container{
+              width: 77.13rem;
+              margin: 0 auto;
+              padding-bottom: 2.13rem; 
+              display: flex;
+              justify-content: space-between;
+              overflow-x: scroll;
+              img{
+                  margin-right: 3.69rem;
+              }
+            }
 
+        }
+      }
+     
+}
+@include responsive($xl){
+    .logos{
+        .brands{
+            
+            .logo-container{
+              width: 46.13rem;
+              display: flex;
+              overflow: visible;
+              img{
+                margin-right: 0.69rem;
+            }
+            }
+          }
+    }
+    
+  }
 .section-title{
     font-size: 1.88rem;
     text-transform: capitalize;
@@ -266,6 +292,33 @@
         width: auto;
     }
 }
+.solutions{
+    position: relative;
+    overflow: hidden;
+    .big-circle{
+        width: 52.13rem;
+        height: 52.13rem;
+        border-radius: 50%;
+        background: rgba(160, 198, 255, 0.41);
+        box-shadow: 1px 1px 99px rgba(0, 0, 0, 0.13);
+        position: absolute;
+        top: 26.75rem;
+        right: 80%;
+        z-index: -1;
+    }
+    .small-circle{
+        width: 32.44rem;
+        height: 32.44rem;
+        border-radius: 50%;
+        background: rgba(160, 198, 255, 0.41);
+        box-shadow: 1px 1px 99px rgba(0, 0, 0, 0.13);
+        position: absolute;
+        top: -14rem;
+        right: -8.94rem;
+        z-index: -1;
+    }
+}
+
 
 .solutions-card{
     display: flex;
@@ -333,6 +386,9 @@
     }
 }
 @include responsive($lg){
+    .solutions{
+        padding-bottom: 15.5rem;
+    }
     .solutions-card{
         grid-template-columns: 1fr 1fr 1fr;
        .card4{
@@ -647,31 +703,263 @@
 
 .contact{
     .container{
-        .form{
-            margin-top: 3.63rem;
-            display: flex;
-            flex-direction: column;
-            label{
-                margin-bottom: 1rem;
+        .contact-wrapper{
+            .form{
+                margin-top: 3.63rem;
+                display: flex;
+                flex-direction: column;
+                label{
+                    margin-bottom: 1rem;
+                }
+                input, textarea{
+                    width: 100%;
+                    background: #F1F1F1;
+                    border: 1px solid #DCDCDC;
+                    box-sizing: border-box;
+                    margin-bottom: 1rem;
+                    padding: 1rem;
+                }
+                input{
+                    height: 2.88rem;
+                }
+                input:active{
+                    border-color: $primary-color;
+                }
+                button{
+                    margin: 1.69rem 0;
+                    width: 12.31rem;
+                    color: $primary-color;
+                }
             }
-            input, textarea{
-                width: 100%;
-                background: #F1F1F1;
-                border: 1px solid #DCDCDC;
-                box-sizing: border-box;
-                margin-bottom: 1rem;
-                padding: 1rem;
+            .map{
+                .location{
+                    .map-responsive{
+                      overflow:hidden;
+                      padding-bottom:56.25%;
+                      position:relative;
+                      height: 16.75rem;
+                      iframe{
+                        left:0;
+                        top:0;
+                        height:100%;
+                        width:100%;
+                        position:absolute;
+                      }
+                      
+                    }
+                  }
             }
-            input{
-                height: 2.88rem;
+            
+        }
+        
+    }
+}
+
+@include responsive($md){
+    .contact{
+        .container{
+            .contact-wrapper{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+                .map{
+                    .location{
+                        .map-responsive{
+                            height: 32.44rem;
+                        }
+                    }
+                }
             }
-            input:active{
-                border-color: $primary-color;
+        }
+    }
+}
+
+.footer{
+    margin-top: 3.63rem; 
+    .wave{
+        width: 100%;
+    }
+    .footer-wrapper{
+        margin-top: -1rem;
+        background: $primary-color;
+        .container{
+            .upper-footer{
+                margin-bottom: 3.94rem;
+                .address{
+                    color: #fff;
+                   .address-content{
+                    margin-top: 3.81rem;
+                       div{
+                           display: flex;
+                           gap: 1rem;
+                           margin-top: 1.38rem;
+                           p{
+                              font-size: 0.88rem;
+                              
+                           }
+                       }
+                   }
+                }
+                .mission{
+                    margin-top: 3.31rem;
+                    color: #fff;
+                    
+                    p{
+                        font-size: 0.88rem;
+                        line-height: 1.63rem;
+                        letter-spacing: -0.035em;
+                        text-transform: capitalize;
+                        color: #FFFFFF;
+                    }
+                    .social-icons{
+                        margin-top: 2.25rem;
+                        a{
+                            i{
+                                color: #fff;
+                                font-size: 1.5rem;
+                                margin-right: 1.88rem;
+                            }
+                        }
+                    }
+                }
             }
-            button{
-                margin: 1.69rem 0;
-                width: 12.31rem;
-                color: $primary-color;
+            .lower-footer{
+                display: flex;
+                gap: 3rem;
+                ul{
+                    li{
+                        margin-bottom: 1rem;
+                        a{
+                            color: #fff;
+                            font-size: 0.88rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.copy{
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 3.94rem;
+    padding-bottom: 2.69rem;
+}
+
+.footer-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #ffff;
+    margin-bottom: 2.31rem;
+}
+
+
+
+@include responsive($md){
+    .footer{
+        .footer-wrapper{
+            .container{
+                .upper-footer{
+                    display: flex;
+                }
+                .lower-footer{
+                    gap: 20.25rem;
+                }
+            }
+        }
+    }
+}
+@include responsive($lg){
+    .footer{
+        .footer-wrapper{
+            .container{
+                display: grid;
+                align-items: center;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                
+                .upper-footer{
+                    grid-area: 1 / 1 / auto / 4;
+                    width: 100%;
+                    .address{
+                        margin-right: 1.31rem;
+                        .address-content{
+                            div{
+                                p{
+                                    font-size: 1rem;
+                                }
+                            }
+                            .oly{
+                                width: 13.06rem;
+                            }
+                            
+                        }
+                    }
+                    .mission{
+                        justify-self: flex-end;
+                        p{
+                            font-size: 1rem;
+                            width: 19.69rem;
+                        }
+                    }
+                }
+                .lower-footer{
+                    grid-area: 1 / span 2;
+                    gap: 9.81rem;
+                }
+            }
+        }
+    }
+}
+
+
+@include responsive($xl){
+    .footer{
+        .footer-wrapper{
+            .container{
+                
+                .upper-footer{
+                    .address{
+                        margin-right: 10.31rem;
+                        .address-content{
+                            div{
+                                p{
+                                    font-size: 1.13rem;
+                                }
+                            }
+                            .oly{
+                                width: 13.06rem;
+                            }
+                            
+                        }
+                    }
+                    .mission{
+                        justify-self: flex-end;
+                        align-self: center;
+                        p{
+                            font-size: 1.13rem;
+                            width: 19.69rem;
+                            line-height: 1.83rem;
+                        }
+                    }
+                }
+                .lower-footer{
+                    grid-area: 1 / span 2;
+                    gap: 9.81rem;
+                    ul{
+                        li{
+                            a{
+                                font-size: 1.13rem;
+                            }
+                        }
+                    }
+                    
+                }
             }
         }
     }
@@ -711,17 +999,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-.footer{
-    height: 50vh;
-}
