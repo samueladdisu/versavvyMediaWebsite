@@ -35,7 +35,7 @@ const solutionCardData = [
             'Live Production Solutions',
             'Live Streaming Solutions'
         ],
-        img: `./assets/broadcast.jpg`,
+        img: `./assets/broadcast/1.jpg`,
         url: `./broadcast.html`  
     },
     {
@@ -46,7 +46,7 @@ const solutionCardData = [
             'Digital Asset Management',
             'Virtualized Data Center Solutions'
         ],
-        img: `./assets/broadcast.jpg`,
+        img: `./assets/storage/1.jpg`,
         url: `./storage.html`  
     },
     {
@@ -55,7 +55,7 @@ const solutionCardData = [
         list: [
             'Live Streaming',
         ],
-        img: `./assets/broadcast.jpg`,
+        img: `./assets/ott/1.jpg`,
         url: `./ott.html`  
     }
 
