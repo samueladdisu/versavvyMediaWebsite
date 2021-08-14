@@ -1,5 +1,5 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home2/bewelltradingcoc/public_html/
+ - export DEPLOYPATH=/home/versavvymediacom/public_html/
  - /bin/cp -R * $DEPLOYPATH
