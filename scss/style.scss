@@ -1,9 +1,14 @@
 @import "reboot";
 @import "mixins";
 @import "utilities";
-
-
-
+@import "dm";
+@import "ds";
+@import "broadcast";
+@import "storage";
+@import "ott";
+@import "service";
+@import "about";
+@import "contact";
 // header and navigation 
 
 
@@ -12,12 +17,14 @@
     height: 7rem;
     background-color: $primary-color;
     z-index: 999999;
+    position: sticky;
+    top: 0;
   nav{
         transition: all 0.3s linear;
         padding-bottom: 1rem;
         position: relative;
         
-        .container{
+        .header-container{
             .nav-header{
                 display: flex;
                 justify-content: space-between;
@@ -45,6 +52,7 @@
   .links-container{
     background: #fff;
     position: absolute;
+    z-index: 999999;
     left: 0;
     right: 0;
     height: 0;
@@ -99,7 +107,7 @@
   @include responsive($xl){
       .nav{
         padding-top: 1.24rem;
-        .container{
+        .header-container{
           display: flex;
           align-items: center;
           .nav-header{
@@ -141,7 +149,7 @@
 
 .banner {
     height: 26.75rem;
-    background: rgba(0, 0, 0, 0.37) url('../assets/banner2.jpg') no-repeat;
+    background: rgba(0, 0, 0, 0.6) url('../assets/banner2.jpg') no-repeat;
     background-position:  center center;
     background-size: cover;
     background-blend-mode: overlay;
@@ -202,7 +210,7 @@
     }
     .brands{
         
-        overflow: scroll;
+        overflow-x: scroll;
         .container{
             .logo-container{
               width: 77.13rem;
@@ -210,7 +218,7 @@
               padding-bottom: 2.13rem; 
               display: flex;
               justify-content: space-between;
-              overflow-x: scroll;
+            //   overflow-x: scroll;
               img{
                   margin-right: 3.69rem;
               }
@@ -307,19 +315,80 @@
         z-index: -1;
     }
     .small-circle{
-        width: 32.44rem;
-        height: 32.44rem;
+        width: 9.4rem;
+        height: 9.4rem;
         border-radius: 50%;
         background: rgba(160, 198, 255, 0.41);
         box-shadow: 1px 1px 99px rgba(0, 0, 0, 0.13);
         position: absolute;
-        top: -14rem;
-        right: -8.94rem;
+        top: -4rem;
+        right: -2.56rem;
         z-index: -1;
+    }
+    .polygon2{
+        position: absolute;
+        top: 3.44rem;
+        left: 1.4rem;
+    }
+    .polygon1{
+        position: absolute;
+        top: 6.75rem;
+        right: 0.5rem;
     }
 }
 
-
+@include responsive($md){
+    .solutions{
+        .big-circle{
+            width: 52.13rem;
+            height: 52.13rem;
+            top: 26.75rem;
+            right: 80%;
+        }
+        .small-circle{
+            width: 28.19rem;
+            height: 28.19rem;
+            top: -17.5rem;
+            right: -15.63rem;
+        }
+        .polygon2{
+            position: absolute;
+            top: 4.56rem;
+            left: 6.06rem;
+        }
+        .polygon1{
+            position: absolute;
+            top: 3rem;
+            right: 12.44rem;
+        }
+    }
+}
+@include responsive($xl){
+    .solutions{
+        .big-circle{
+            width: 52.13rem;
+            height: 52.13rem;
+            top: 26.75rem;
+            right: 80%;
+        }
+        .small-circle{
+            width: 32.44rem;
+            height: 32.44rem;
+            top: -14.06rem;
+            right: -9.13rem;
+        }
+        .polygon2{
+            position: absolute;
+            top: 6.31rem;
+            left: 13.19rem;
+        }
+        .polygon1{
+            position: absolute;
+            top: 4.13rem;
+            right: 25.56rem;
+        }
+    }
+}
 .solutions-card{
     display: flex;
     flex-direction: column;
@@ -671,6 +740,18 @@
                 }
             }
             .about-img{
+                // width: 30.88rem;
+                // height: 36.31rem;
+                border-radius: 1.38rem 9.25rem;
+            }
+        }
+    }
+}
+@include responsive($xl){
+    .about{
+        .container{
+            
+            .about-img{
                 width: 30.88rem;
                 height: 36.31rem;
                 border-radius: 1.38rem 9.25rem;
@@ -690,11 +771,6 @@
                     line-height: 2.4rem;
                     font-size: 1.53rem;
                 }
-            }
-            .about-img{
-                width: 30.88rem;
-                height: 36.31rem;
-                border-radius: 1.38rem 9.25rem;
             }
         }
     }

@@ -1,20 +1,7 @@
-const menu = document.querySelector('.menu')
-const linksContainer = document.querySelector('.links-container')
-const dropdown = document.querySelector('.drop-down')
-const dropdownContent = document.querySelector('.drop-down-link')
+import { header, footer } from "./common.js"
 
-
-menu.addEventListener('click',() => {
-    linksContainer.classList.toggle('show-links')
-})
-dropdown.addEventListener('mouseenter', () => {
-    
-    dropdownContent.classList.add('display-links')
-})
-dropdown.addEventListener('mouseleave', () => {
-
-    dropdownContent.classList.remove('display-links')
-})
+header()
+footer()
 
 // SOLUTION CARDS 
 
@@ -28,7 +15,7 @@ const solutionCardData = [
             'Enterprise IPTV'
         ],
         img: `./assets/digitalSignage2.jpg`,
-        url: `./digitalSignage.html`
+        url: `./ds.html`
     },
     {
         id: "card2",
@@ -39,7 +26,7 @@ const solutionCardData = [
             'Social Media Activation'
         ],
         img: `./assets/digitalMarketing.jpg`,
-        url: `./digitalMarketing.html`  
+        url: `./DM.html`  
     },
     {
         id: "card3",
@@ -69,7 +56,7 @@ const solutionCardData = [
             'Live Streaming',
         ],
         img: `./assets/broadcast.jpg`,
-        url: `./storage.html`  
+        url: `./ott.html`  
     }
 
 ]
@@ -94,3 +81,4 @@ let solutionCardContent = solutionCardData.map(item =>{
 }).join('')
 
 solutionCard.innerHTML = solutionCardContent
+

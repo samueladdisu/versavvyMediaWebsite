@@ -1,0 +1,65 @@
+.main-content{
+    position: relative;
+    .absolute{
+        position: absolute;
+        z-index: -1;
+    }
+    .b-wave{
+        @extend .absolute;
+        top: 4rem;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .b-blob1{
+        @extend .absolute;
+        width: 8rem;
+        opacity: 0.3;
+        top: 65.56rem;
+        left: -2rem;
+    }
+    .b-blob{
+        @extend .absolute;
+        opacity: 0.3;
+        width: 8rem;
+        right: -3rem;
+        bottom: 0;
+    }
+}
+
+@include responsive($md){
+    .main-content{
+        .b-wave{
+            top: 0;
+            width: 40rem;
+        }
+        .b-blob1{
+            width: 15rem;
+            top: 40.56rem;
+            left: -4rem;
+        }
+        .b-blob{
+            width: 15rem;
+            right: -6rem;
+        }
+    }
+    
+}
+
+@include responsive($xl){
+    .main-content{
+        .b-wave{
+            top: 10rem;
+            width: auto;
+        }
+        .b-blob1{
+            width: auto;
+            top: 65.56rem;
+            left: -10rem;
+        }
+        .b-blob{
+            width: auto;
+            right: -10rem;
+        }
+    }
+}

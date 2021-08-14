@@ -1,0 +1,433 @@
+
+.dm-header{
+    height: 7rem;
+    background-color: #fff;
+    z-index: 999999;
+    position: sticky;
+    top: 0;
+  nav{
+        transition: all 0.3s linear;
+        padding-bottom: 1rem;
+        position: relative;
+        
+        .header-container{
+            .nav-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 1.24rem;
+                .logo{
+                width: 16rem;
+                }
+                
+            }
+            @include responsive($md){
+              .nav-header{
+                    display: flex;
+                    .logo{
+                        flex: 1;
+                    }
+                    .ham{
+                        font-size: 4rem;
+                    }
+                
+                }
+            }
+        }
+    }
+  .links-container{
+    z-index: 9999;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+    .nav-links{
+        
+      li{
+      padding: 0.75rem 1rem;
+      
+      }
+      .drop-down{
+        padding: 0.75rem 1rem;
+        height: auto;
+          
+          .drop-down-link{
+            background-color: #fff;
+            border-radius: 3px;
+            display: none;
+            
+            li{
+                a{
+                    color: $primary-color !important;
+                }
+            }
+
+          }
+          @include responsive($xl){
+            .drop-down-link{
+                position: absolute;
+                box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
+                
+            }
+          }
+          .display-links{
+            display: block !important;  
+          }
+        
+      }
+    }
+
+  }
+ @include responsive($xl){
+   .links-container{
+     position: static;
+   }
+ }
+  .show-links{
+    height: auto !important;
+  }
+  
+  @include responsive($xl){
+      .nav{
+        padding-top: 1.24rem;
+        .header-container{
+          display: flex;
+          align-items: center;
+          .nav-header{
+            flex: 1;
+            padding: 0;
+            .menu{
+              display: none;
+            }
+          }
+          .links-container{
+            flex: 1;
+            background: transparent;
+            height: auto;
+            .nav-links{
+              display: flex;
+              justify-content: space-between;
+              li{
+                a{
+                  color: $primary-color;
+                  transition: all .3s linear;
+                }
+                .black{
+                  color: #000;
+                }
+              }
+              
+            }
+            
+          }
+        }
+    }
+}
+}
+
+.dm-banner{
+  position: relative;
+  // overflow: hidden;
+  .dm-polygon2{
+    position: absolute;
+    top: 1.13rem;
+    left: 0.19rem;
+  }
+  .dm-polygon1{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .code{
+    position: absolute;
+    top: 17rem;
+    left: 0;
+  }
+  .brush{
+    position: absolute;
+    top: 20rem;
+    right: 1.81rem;
+  }
+    .container{
+        .dm-headline{
+            padding-top: 6.38rem;
+            margin-bottom: 4.13rem;
+            position: relative;
+            img{
+                position: absolute;
+                top: 2rem;
+                z-index: -1;
+            }
+            .subtitle{
+                font-size: 0.88rem;
+                line-height: 0.94rem;
+                letter-spacing: 0.385em;
+                text-transform: uppercase;
+                color: #292929;
+                margin-bottom: 0.5rem;
+            }
+            h1{
+                font-weight: bold;
+                font-size: 2rem;
+                line-height: 2.5rem;
+                text-transform: capitalize;
+                color: $primary-color;
+                margin-bottom: 1.88rem;
+            }
+        }
+    }
+}
+@include responsive($md){
+  .dm-banner{
+    .dm-polygon2{
+      position: absolute;
+      top: 1.13rem;
+      left: 0.19rem;
+    }
+    .dm-polygon1{
+      position: absolute;
+      right: 22.25rem;
+      top: 0;
+    }
+    .code{
+      position: absolute;
+      top: 17rem;
+      left: 0;
+    }
+    .brush{
+      position: absolute;
+      top: 20rem;
+      right: 27rem;
+    }
+    .container{
+      .dm-headline{
+        
+        h1{
+          font-size: 2.25rem;
+          width: 18.69rem;
+          height: 5rem;
+          line-height: 2.38rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .dm-illu{
+        align-self: center;
+      }
+
+    }
+  }
+}
+
+@include responsive($lg){
+  .dm-banner{
+    
+    .container{
+      .dm-headline{
+        .subtitle{
+          font-size: 1.13rem;
+
+        }
+        h1{
+          font-size: 2.81rem;
+          width: 25.44rem;
+          height: 8.25rem;
+          line-height: 4.06rem;
+        }
+      }
+    }
+  }
+}
+@include responsive($xl){
+  .dm-banner{
+    .dm-polygon2{
+      top: 3.8rem;
+      left: 2.44rem;
+    }
+    .dm-polygon1{
+      right: 53.88rem;
+      top: 0;
+    }
+    .code{
+      top: 23.5rem;
+      left: 2.19rem;
+    }
+    .brush{
+      top: 28.94rem;
+      right: 58.81rem;
+    }
+    .container{
+      .dm-headline{
+        img{
+          top: 0;  
+        }
+        #cta{
+          font-size: 1.5rem;
+          padding: 1.25rem 3rem;
+        }
+        .subtitle{
+          font-size: 1.13rem;
+          
+        }
+        h1{
+          font-size: 3.81rem;
+          width: 31.44rem;
+          height: 8.25rem;
+          line-height: 4.06rem;
+          margin-bottom: 2.56rem;
+        }
+      }
+    }
+  }
+}
+
+@include responsive($xxl){
+  .dm-banner{
+    .dm-polygon2{
+      top: 3.8rem;
+      left: 8.44rem;
+    }
+    .dm-polygon1{
+      right: 73.88rem;
+      top: 0;
+    }
+    .code{
+      top: 23.5rem;
+      left: 8.19rem;
+    }
+    .brush{
+      top: 28.94rem;
+      right: 78.81rem;
+    }
+  }
+
+}
+.dm-service{
+    padding-top: 5.63rem;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+    .up{
+      position: absolute;
+      width: 10.69rem;
+      height: 14.25rem;
+      left: -4.06rem;
+      top: -3.63rem;
+    }
+    .down{
+      position: absolute;
+      width: 10.69rem;
+      height: 14.25rem;
+      bottom: 0;
+      right: -4.06rem;
+    }
+    .container{
+        .dm-service-title{
+            .service-subtitle{
+                font-size: 0.88rem;
+                line-height: 0.94rem;
+                letter-spacing: 0.385em;
+                text-transform: uppercase;
+                color: #292929;
+                text-align: center;
+            }
+            h1{
+                margin-top: 0.69rem;
+            }
+        }
+        .dm-service-card{
+          margin-bottom: 11.56rem;
+            .s-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 6.31rem;
+                text-align: center;
+                img{
+                    margin-bottom: 3.63rem;
+                }
+                .s-card-title{
+                    font-weight: 500;
+                    font-size: 1.5rem;
+                    line-height: 1.56rem;
+                    color: $primary-color;
+                    margin-bottom: 1.38rem;
+                }
+                .s-card-text{
+                    font-size: 1rem;
+                    line-height: 1.63rem;
+                    /* or 26px */
+                    text-align: center;
+
+                    color: #656565;
+
+                }
+            }
+        }
+    }
+}
+
+@include responsive($md){
+  .dm-service{
+    .up{
+      width: 13.75rem;
+      height: 18.38rem;
+      left: -4.06rem;
+      top: -3.63rem;
+    }
+    .down{
+      width: 13.75rem;
+      height: 18.38rem;
+      bottom: 0rem;
+      right: -4.06rem;
+    }
+    .container{
+      .dm-service-card{
+        margin-bottom: 13.5rem;
+        .s-card{
+          img{
+            height: 15.63rem;
+          }
+          .s-card-text{
+            width: 16.44rem;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive($xl){
+  .dm-service{
+    padding-bottom: 4.5rem;
+    .up{
+      width: 24.25rem;
+      height: 32.28rem;
+      left: -8.06rem;
+      top: -3.63rem;
+    }
+    .down{
+      width: 24.25rem;
+      height: 32.28rem;
+      bottom: 0;
+      right: -8.06rem;
+    }
+    .container{
+      .dm-service-card{
+        margin-bottom: 13.5rem;
+        .s-card{
+          .s-card-text{
+            width: 22.94rem;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

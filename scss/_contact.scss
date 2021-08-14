@@ -1,0 +1,242 @@
+main{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    .contact-blob{
+        position: absolute;
+        z-index: -1;
+        top: -3rem;
+        left: -2rem;
+    }
+    .c-blob{
+        position: absolute;
+        z-index: -1;
+        right: -9rem;
+        top: 24rem;
+    }
+    .contact-info{
+        
+            .contact-subtitle{
+                font-size: 0.88rem;
+                line-height: 0.94rem;
+                letter-spacing: 0.385em;
+                text-transform: uppercase;
+                color: #292929;
+                // margin-bottom: 0.5rem;
+            }
+            .contact-title{
+                font-weight: bold;
+                font-size: 2rem;
+                line-height: 2.5rem;
+                text-transform: capitalize;
+                color: $primary-color;
+                margin-bottom: 1.88rem;
+            }
+            .contact-details{
+                margin-top: 3rem;
+                
+                .contact-content{
+                    display: flex;
+                    margin-bottom: 2.19rem;
+                    &:last-child{
+                        .text{
+                            width: 15.69rem;
+                            line-height: 1.69rem;
+                        }
+                    }
+                    .text{
+                        margin-left: 0.94rem;
+                        align-self: center;
+                        p{
+                            margin-bottom: 0.75rem;
+                        }
+                    }
+                    .bx{
+                        background-color: $secondary-color;
+                        border-radius: 50%;
+                        padding: 0.44rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .socials{
+                .social-title{
+                    font-weight: 500;
+                    font-size: 2.25rem;
+                    line-height: 2.38rerm;
+                    color: $primary-color;
+                }
+                .social-icons{
+                    margin: 2.38rem 0;
+                    a{
+                        margin-right: 1rem;
+                    }
+                    .bx{
+                        background-color: $secondary-color;
+                        border-radius: 50%;
+                        font-size: 1.5rem;
+                        padding: 0.44rem;
+                    }
+                }
+            }
+        
+    }
+    .contact-form{
+        
+            .bg{
+                background: #FFFFFF;
+                box-shadow: 2px 2px 23px -4px rgba(0, 0, 0, 0.25);
+                border-radius: 23px;
+                padding: 0.2rem 1.31rem;
+                .form{
+                    margin-top: 3.63rem;
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        margin-bottom: 1rem;
+                    }
+                    input, textarea{
+                        width: 100%;
+                        background: #F1F1F1;
+                        border: 1px solid #DCDCDC;
+                        box-sizing: border-box;
+                        margin-bottom: 1rem;
+                        padding: 1rem;
+                    }
+                    input{
+                        height: 2.88rem;
+                    }
+                    input:active{
+                        border-color: $primary-color;
+                    }
+                    button{
+                        margin: 1.69rem 0;
+                        width: 12.31rem;
+                        color: $primary-color;
+                    }
+                }
+            }
+        
+        
+    }
+}
+.map{
+    margin-top: 4rem;
+    overflow: hidden;
+    .container{
+        .location{
+            .map-responsive{
+              overflow:hidden;
+              padding-bottom:56.25%;
+              position:relative;
+              height: 17rem;
+              iframe{
+                left:0;
+                top:0;
+                height:100%;
+                width:100%;
+                position:absolute;
+              }
+              
+            }
+          }
+    }
+   
+}
+
+@include responsive($md){
+    main{
+        .contact-blob{
+            position: absolute;
+            z-index: -1;
+            top: -9rem;
+            left: -18rem;
+        }
+        .c-blob{
+            position: absolute;
+            z-index: -1;
+            right: -9rem;
+            top: -4rem;
+        }
+    }
+    .map{
+        height: 20rem;
+        .container{
+            .location{
+                .map-responsive{
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}
+@include responsive($lg){
+    main{
+        padding-top: 5.8rem;
+        .contact-blob{
+            position: absolute;
+            z-index: -1;
+            top: -12rem;
+            left: -28rem;
+        }
+        .contact-info{
+            
+                .contact-subtitle{
+                    font-size: 1.13rem;
+                }
+                .contact-title{
+                    font-size: 2.81rem;
+                    line-height: 4.06rem;
+                }
+            
+        }
+        .contact-form{
+            
+                .bg{
+                    padding: .88rem 3.31rem;
+                }
+            
+        }
+    }
+    .map{
+        .container{
+            .location{
+                .map-responsive{
+                    height: 10rem;
+                }
+            }
+        }
+    }
+}
+@include responsive($xl){
+    main{
+        .contact-blob{
+            top: -12rem;
+            left: -18rem;
+        }
+    }
+    .map{
+        height: 30rem;
+    }
+}
+@include responsive($xxl){
+    main{
+        .contact-blob{
+            position: absolute;
+            z-index: -1;
+            top: -12rem;
+            left: -12rem;
+        }
+        .c-blob{
+            z-index: -1;
+            right: 5rem;
+            top: -4rem;
+        }
+    }
+}
+
+
+
+
+

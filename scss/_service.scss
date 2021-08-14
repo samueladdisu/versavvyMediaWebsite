@@ -1,0 +1,27 @@
+.main-content{
+    .blob-s{
+        position: absolute;
+        z-index: -1;
+        top: -2rem;
+        left: -2rem;
+        width: 10rem;
+    }
+}
+@include responsive($md){
+    .main-content{
+        .blob-s{
+            width: 15rem;
+        }
+    }
+}
+@include responsive($xl){
+    .main-content{
+        .blob-s{
+            width: auto;
+            top: -4rem;
+            left: -4rem;
+        }
+    }
+}
+// top: -5rem;
+//         left: -3rem;

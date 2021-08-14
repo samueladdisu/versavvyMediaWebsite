@@ -1,0 +1,50 @@
+.main-content{
+    .absolute{
+        position: absolute;
+        z-index: -1;
+    }
+    .yt{
+        @extend .absolute;
+        width: 3rem;
+        top: 2rem;
+        left: 1rem;
+    }
+    .blob-o{
+        @extend .absolute;
+        opacity: .3;
+        width: 7rem;
+        right: -2rem;
+    }
+    .icons{
+        @extend .absolute;
+        bottom: 0;
+    }
+}
+
+@include responsive($md){
+    .main-content{
+        .icons{
+            width: 30rem;
+            left: 8rem;
+        }
+    }
+}
+@include responsive($lg){
+   .main-content{
+    .blob-o{
+        width: auto;
+        right: -8rem;
+    }
+    .yt{
+        width: auto;
+    }
+   }
+}
+@include responsive($xl){
+    .main-content{
+        .icons{
+            width: 35rem;
+            bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.pros{
+    .container{
+        position: relative;
+        .hexagon{
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+        }
+        .pro-title{
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 2.13rem;
+            text-align: center;
+            color: $primary-color;
+            text-transform: capitalize;
+            margin-bottom: 1.19rem;
+        }
+        .pro-content{
+            margin-top: 3.19rem;
+            .person{
+                text-align: center;
+                margin-bottom: 1.25rem;
+                .img{
+                    width: 17rem;
+                    margin: 0 auto;
+                    margin-bottom: 1.13rem;
+                    height: 25.31rem;
+                    z-index: 1;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center center;
+                        z-index: -1;
+                        border-radius: 1.13rem;
+                    }
+                }
+                .name{
+                    font-size: 1.13rem;
+                    line-height: 1.19rem;
+                    color: $primary-color;
+                    margin-bottom: 0.44rem;
+                }
+                .job{
+                    font-size: 0.88rem;
+                    color: #585858;
+                }
+            }
+        }
+    }
+}
+
+@include responsive($lg){
+    .pros{
+        .container{
+            .pro-content{
+                width: 40rem;
+                margin: 0 auto;
+                .person{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+@include responsive($xl){
+    .pros{
+        .container{
+            .pro-title{
+                font-size: 3.25rem;
+                width: 30.44rem;
+                margin: 0 auto;
+                margin-bottom: 1.25rem;
+                line-height: 3.44rem;
+            }
+            .pro-content{
+                width: auto;
+                padding-bottom: 14rem;
+            }
+        }
+    }
+}
+
+
+

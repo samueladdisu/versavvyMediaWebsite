@@ -1,0 +1,34 @@
+.main-content{
+    .absolute{
+        position: absolute;
+        z-index: -1;
+    }
+    .vector{
+        @extend .absolute;
+        top: 0;
+        width: 8rem
+    }
+    .wave1{
+        @extend .absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@include responsive($lg){
+    .main-content{
+        .vector{
+            width: 15rem;
+        }
+        .wave1{
+            bottom: -15rem;
+        }
+    }
+}
+@include responsive($xl){
+    .main-content{
+        .vector{
+            width: auto;
+        }
+    }
+}
