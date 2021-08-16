@@ -4,7 +4,7 @@
 
         echo 'form submitted';
         // $name = $_POST['fname'];
-        $to = 'sales@versavvymedia.com';
+        $to = 'Samuel@versavvymedia.com';
         $header = $_POST['email'];
         $subject = $_POST['subject'];
         $msg = $_POST['msg'];
