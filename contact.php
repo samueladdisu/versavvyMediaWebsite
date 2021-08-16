@@ -5,7 +5,11 @@
         echo 'form submitted';
         // $name = $_POST['fname'];
         $to = 'samuel@versavvymedia.com';
-        $header = $_POST['email'];
+        $header =  'From: ' . $_POST['email'] . "\r\n" . 
+        
+            'Reply-To: test@test.com' . "\r\n" . 
+        
+            'X-Mailer: PHP/' . phpversion();
         $subject = $_POST['subject'];
         $msg = $_POST['msg'];
 
