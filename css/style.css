@@ -1720,14 +1720,15 @@ html {
   }
 }
 
-.pros .container {
-  position: relative;
-}
-
-.pros .container .hexagon {
+.hexagon {
   position: absolute;
   z-index: -1;
-  bottom: 0;
+  top: 0;
+  right: 0;
+}
+
+.pros .container {
+  position: relative;
 }
 
 .pros .container .pro-title {
@@ -1798,7 +1799,6 @@ html {
   }
   .pros .container .pro-content {
     width: auto;
-    padding-bottom: 14rem;
   }
 }
 

@@ -1,11 +1,14 @@
+
+ .hexagon{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
 .pros{
     .container{
         position: relative;
-        .hexagon{
-            position: absolute;
-            z-index: -1;
-            bottom: 0;
-        }
+       
         .pro-title{
             font-weight: bold;
             font-size: 2rem;
@@ -78,7 +81,7 @@
             }
             .pro-content{
                 width: auto;
-                padding-bottom: 14rem;
+                // padding-bottom: 14rem;
             }
         }
     }
