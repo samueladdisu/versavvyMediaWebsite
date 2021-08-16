@@ -8,7 +8,7 @@
 
     'X-Mailer: PHP/' . phpversion(); 
 
-        if ( mail($to, $subject, $message, $header)) {
+        if ( mail($to, $subject, $message, $headers)) {
             echo "<script> alert('Thanks For Contacting Us We will Respond to you shortly'); </script>";
             header('Location: ./contact.html');
          } else {
