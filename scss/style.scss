@@ -410,7 +410,8 @@
             object-fit: cover;
         }
         .card-content{
-            height: 11.25rem;
+            // height: 11.25rem;
+
             position: absolute;
             right: 0;
             left: 0;
@@ -433,15 +434,7 @@
                     margin-bottom: 1rem;
                 }
             }
-            a{
-                visibility: hidden;
-            }
-            &:hover{
-                height: auto;
-            }
-            &:hover a{
-                visibility: visible;
-            }
+            
         }
     }
 }
@@ -451,6 +444,7 @@
         grid-template-columns: 1fr 1fr;
         .card5{
             margin-left: 50%;
+            
         }
     }
 }
@@ -460,6 +454,21 @@
     }
     .solutions-card{
         grid-template-columns: 1fr 1fr 1fr;
+        .card{
+            .card-content{
+                height: 11.25rem;
+               
+                a{
+                    visibility: hidden;
+                }
+                &:hover{
+                    height: auto;
+                }
+                &:hover a{
+                    visibility: visible;
+                }
+            }
+        }
        .card4{
            margin-left: 45%;
        }
@@ -1001,11 +1010,12 @@
                 
                 .upper-footer{
                     .address{
-                        margin-right: 10.31rem;
+                        margin-right: 5.31rem;
                         .address-content{
                             div{
                                 p{
-                                    font-size: 1.13rem;
+                                    // font-size: 1.13rem;
+                                    line-height: 1.82rem;
                                 }
                             }
                             .oly{
@@ -1018,7 +1028,7 @@
                         justify-self: flex-end;
                         align-self: center;
                         p{
-                            font-size: 1.13rem;
+                            // font-size: 1.13rem;
                             width: 19.69rem;
                             line-height: 1.83rem;
                         }
@@ -1030,7 +1040,7 @@
                     ul{
                         li{
                             a{
-                                font-size: 1.13rem;
+                                // font-size: 1.13rem;
                             }
                         }
                     }
@@ -1042,7 +1052,32 @@
 }
 
 
-
+@include responsive($xxl){
+    .footer{
+        .footer-wrapper{
+            .container{
+                .upper-footer{
+                    .address{
+                        margin-right: 10.31rem;
+                        .address-content{
+                            div{
+                                p{
+                                    font-size: 1.13rem;
+                                    line-height: 1.82rem;
+                                }
+                            }
+                        }
+                    }
+                    .mission{
+                        p{
+                            font-size: 1.13rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

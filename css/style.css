@@ -2409,7 +2409,6 @@ main .contact-form .bg .form button {
 }
 
 .solutions-card .card .card-content {
-  height: 11.25rem;
   position: absolute;
   right: 0;
   left: 0;
@@ -2437,18 +2436,6 @@ main .contact-form .bg .form button {
   margin-bottom: 1rem;
 }
 
-.solutions-card .card .card-content a {
-  visibility: hidden;
-}
-
-.solutions-card .card .card-content:hover {
-  height: auto;
-}
-
-.solutions-card .card .card-content:hover a {
-  visibility: visible;
-}
-
 @media screen and (min-width: 768px) {
   .solutions-card {
     display: grid;
@@ -2465,6 +2452,18 @@ main .contact-form .bg .form button {
   }
   .solutions-card {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .solutions-card .card .card-content {
+    height: 11.25rem;
+  }
+  .solutions-card .card .card-content a {
+    visibility: hidden;
+  }
+  .solutions-card .card .card-content:hover {
+    height: auto;
+  }
+  .solutions-card .card .card-content:hover a {
+    visibility: visible;
   }
   .solutions-card .card4 {
     margin-left: 45%;
@@ -2933,10 +2932,10 @@ main .contact-form .bg .form button {
 
 @media screen and (min-width: 1200px) {
   .footer .footer-wrapper .container .upper-footer .address {
-    margin-right: 10.31rem;
+    margin-right: 5.31rem;
   }
   .footer .footer-wrapper .container .upper-footer .address .address-content div p {
-    font-size: 1.13rem;
+    line-height: 1.82rem;
   }
   .footer .footer-wrapper .container .upper-footer .address .address-content .oly {
     width: 13.06rem;
@@ -2946,7 +2945,6 @@ main .contact-form .bg .form button {
     align-self: center;
   }
   .footer .footer-wrapper .container .upper-footer .mission p {
-    font-size: 1.13rem;
     width: 19.69rem;
     line-height: 1.83rem;
   }
@@ -2954,7 +2952,17 @@ main .contact-form .bg .form button {
     grid-area: 1 / span 2;
     gap: 9.81rem;
   }
-  .footer .footer-wrapper .container .lower-footer ul li a {
+}
+
+@media screen and (min-width: 1920px) {
+  .footer .footer-wrapper .container .upper-footer .address {
+    margin-right: 10.31rem;
+  }
+  .footer .footer-wrapper .container .upper-footer .address .address-content div p {
+    font-size: 1.13rem;
+    line-height: 1.82rem;
+  }
+  .footer .footer-wrapper .container .upper-footer .mission p {
     font-size: 1.13rem;
   }
 }

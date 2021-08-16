@@ -1,4 +1,5 @@
-import { footer } from "./common.js";
+import { header, footer } from "./common.js";
+header();
 const menu = document.querySelector('.menu')
 const linksContainer = document.querySelector('.links-container')
 const dropdown = document.querySelector('.drop-down')
@@ -14,4 +15,5 @@ dropdown.addEventListener('mouseleave', () => {
 
     dropdownContent.classList.remove('display-links')
 })
+
 footer();

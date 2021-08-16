@@ -82,3 +82,34 @@ let solutionCardContent = solutionCardData.map(item =>{
 
 solutionCard.innerHTML = solutionCardContent
 
+const logoContainer = document.querySelector('.logo-container')
+
+logoContainer.addEventListener('mouseover', e => {
+    const img = e.target.getAttribute('src');
+    if(img   === "./assets/logos/Battery World.svg"){
+        e.target.setAttribute('src', "./assets/logos/Battery World_real.svg")
+    }else if (img === "./assets/logos/safecare_vector.svg"){
+        e.target.setAttribute('src',"./assets/logos/safecare_vector_real.svg")
+    }else if (img === "./assets/logos/prime_media.svg"){
+        e.target.setAttribute('src',"./assets/logos/prime_media_real.svg")
+    }else if(img === "./assets/logos/TOMOCA.svg"){
+        e.target.setAttribute('src', "./assets/logos/TOMOCA_real.svg")
+    }else if(img === "./assets/logos/elnes.svg"){
+        e.target.setAttribute('src',"./assets/logos/elnes_real.svg")
+    }
+})
+
+logoContainer.addEventListener('mouseout', e => {
+    const img = e.target.getAttribute('src');
+    if(img   === "./assets/logos/Battery World_real.svg"){
+        e.target.setAttribute('src', "./assets/logos/Battery World.svg")
+    }else if (img === "./assets/logos/safecare_vector_real.svg"){
+        e.target.setAttribute('src',"./assets/logos/safecare_vector.svg")
+    }else if (img === "./assets/logos/prime_media_real.svg"){
+        e.target.setAttribute('src',"./assets/logos/prime_media.svg")
+    }else if(img === "./assets/logos/TOMOCA_real.svg"){
+        e.target.setAttribute('src', "./assets/logos/TOMOCA.svg")
+    }else if(img === "./assets/logos/elnes_real.svg"){
+        e.target.setAttribute('src',"./assets/logos/elnes.svg")
+    }
+})
