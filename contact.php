@@ -2,7 +2,7 @@
     if(isset($_POST['submit'])){
         echo 'form submited';
         echo 'form submitted';
-        $to = 'sales@bewelltradingco.com';
+        $to = 'samuel@versavvymedia.com';
         $header = $_POST['email'];
         $subject = $_POST['subject'];
         $msg = $_POST['msg'];
