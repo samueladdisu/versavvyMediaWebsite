@@ -1,26 +1,34 @@
-<?php 
-
-    if(isset($_POST['submit'])){
-        // echo $_POST['fname'];
-        // echo $_POST['email'];
-        // echo $_POST['subject'];
-        // echo $_POST['msg'];
-
-        try {
-            $to = 'samueladdisu7@gmail.com';
-            $subject = $_POST['subject'];
-            $msg = $_POST['msg'];
-            $header = 'From: '. $_POST['email'] . "\r\n" .
-            'Reply-To: '. $_POST['email'] . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
-            if(mail($to, $subject, $msg, $header)){
-                
-                echo "<script> alert('message sent');</script>";
-                header('Location: /.contact.html');
-            }
-
-        } catch(Exception $e){
-            echo 'Caught exception: ', $e->getMessage(), "\n";
-        }
-        
+<?php
+  
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+      
+    require 'vendor/autoload.php';
+      
+    $mail = new PHPMailer(true);
+      
+    try {
+        $mail->SMTPDebug = 2;                                       
+        $mail->isSMTP();                                            
+        $mail->Host       = 'mail.versavvymedia.com;';                    
+        $mail->SMTPAuth   = true;                             
+        $mail->Username   = 'samuel@versavvymedia.com';                 
+        $mail->Password   = '$@mu3l@202!';                        
+        $mail->SMTPSecure = 'tls';                              
+        $mail->Port       = 465;  
+      
+        $mail->setFrom('samuel@versavvymedia.com', 'Name');           
+        $mail->addAddress('sales@versavvymedia.com');
+        // $mail->addAddress('receiver2@gfg.com', 'Name');
+           
+        $mail->isHTML(true);                                  
+        $mail->Subject = $_POST['subject'];
+        $mail->Body    = $_POST['msg'];
+        $mail->AltBody = $_POST['msg'];
+        $mail->send();
+        echo "Mail has been sent successfully!";
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
+      
+    ?>
