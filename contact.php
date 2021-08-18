@@ -26,6 +26,7 @@
         $mail->Body    = $_POST['msg'];
         $mail->AltBody = $_POST['msg'];
         $mail->send();
+        echo "<script> alert('message sent');</script>";
         echo "Mail has been sent successfully!";
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
