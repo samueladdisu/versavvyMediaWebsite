@@ -14,7 +14,8 @@
             'Reply-To: '. $_POST['email'] . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
             if(mail($to, $subject, $msg, $header)){
-                echo "message sent";
+                
+                echo "<script> alert('message sent');</script>";
             }
 
         } catch(Exception $e){
