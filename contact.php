@@ -7,7 +7,7 @@
         // echo $_POST['msg'];
 
         try {
-            $to = 'samuel@versavvymedia.com';
+            $to = 'samueladdisu7@gmail.com';
             $subject = $_POST['subject'];
             $msg = $_POST['msg'];
             $header = 'From: '. $_POST['email'] . "\r\n" .
@@ -16,6 +16,7 @@
             if(mail($to, $subject, $msg, $header)){
                 
                 echo "<script> alert('message sent');</script>";
+                header('Location: /.contact.html');
             }
 
         } catch(Exception $e){
