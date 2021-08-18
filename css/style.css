@@ -1481,6 +1481,9 @@ html {
   .main-content .webs {
     top: 116rem;
   }
+  .main-content .container .ds-card #about-title {
+    padding-bottom: 2rem;
+  }
   .main-content .container .ds-card .ds-card-top {
     padding-bottom: 7.13rem;
   }

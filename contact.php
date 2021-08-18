@@ -24,7 +24,7 @@
         $mail->isHTML(true);                                  
         $mail->Subject = $_POST['subject'];
         $mail->Body    = $_POST['msg'];
-        $mail->AltBody = $_POST['msg'];
+        // $mail->AltBody = $_POST['msg'];
         $mail->send();
         echo "<script> alert('message sent');</script>";
         echo "Mail has been sent successfully!";
