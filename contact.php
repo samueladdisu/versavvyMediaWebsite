@@ -10,7 +10,7 @@
          try {
              $mail->SMTPDebug = 2;                                       
              $mail->isSMTP();                                            
-             $mail->Host       = 'charlie.versavvymedia.com;';                    
+             $mail->Host       = 'smtp.gmail.com;';                    
              $mail->SMTPAuth   = true;                             
              $mail->Username   = 'samuel@versavvymedia.com';                 
              $mail->Password   = '$@mu3l@202!';                        
