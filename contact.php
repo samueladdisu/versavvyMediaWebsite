@@ -12,8 +12,8 @@
              $mail->isSMTP();                                            
              $mail->Host       = 'smtp.gmail.com;';                    
              $mail->SMTPAuth   = true;                             
-             $mail->Username   = 'samuel@versavvymedia.com';                 
-             $mail->Password   = '$@mu3l@202!';                        
+             $mail->Username   = 'samueladdisu7@gmail.com';                 
+             $mail->Password   = '$@m1842Dontquit';                        
              $mail->SMTPSecure = 'tls';                              
              $mail->Port       = 465;  
            
