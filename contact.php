@@ -17,7 +17,7 @@
              $mail->SMTPSecure = 'tls';                              
              $mail->Port       = 465;  
            
-             $mail->setFrom('samuel@versavvymedia.com', 'Name');           
+             $mail->setFrom('samueladdisu7@gmail.com', 'Samuel');           
              $mail->addAddress('sales@versavvymedia.com');
              // $mail->addAddress('receiver2@gfg.com', 'Name');
                 
