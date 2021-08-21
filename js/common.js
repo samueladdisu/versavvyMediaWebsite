@@ -21,7 +21,7 @@ function header(){
                                 <ul class="drop-down-link">
                                     <li><a href="./ds.html">Digital Signage</a></li>
                                     <li><a href="./DM.html">Digital Marketing</a></li>
-                                    <li><a href="./broadcast.html">Brodcast</a></li>
+                                    <li><a href="./broadcast.html">Broadcast</a></li>
                                     <li><a href="./storage.html">Storage </a></li>
                                     <li><a href="./ott.html">OTT</a></li>
                                 </ul>

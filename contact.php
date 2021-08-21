@@ -10,7 +10,7 @@
          try {
              $mail->SMTPDebug = 2;                                       
              $mail->isSMTP();                                            
-             $mail->Host       = 'smtp.gmail.com;';                    
+             $mail->Host       = 'smtp.gmail.com';                    
              $mail->SMTPAuth   = true;                             
              $mail->Username   = 'samueladdisu7@gmail.com';                 
              $mail->Password   = '$@m1842Dontquit';                        
@@ -25,9 +25,10 @@
              $mail->Subject = $_POST['subject'];
              $mail->Body    = $_POST['msg'];
              // $mail->AltBody = $_POST['msg'];
-             $mail->send();
-             echo "<script> alert('message sent');</script>";
-             echo "Mail has been sent successfully!";
+             if($mail->send()){
+               echo "<script> alert('message sent');</script>";
+               echo "Mail has been sent successfully!";
+             }
          } catch (Exception $e) {
              echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
          }
