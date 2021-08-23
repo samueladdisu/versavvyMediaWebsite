@@ -135,7 +135,7 @@ class Content {
         const content = this.data.map(items => {
             if((items.id % 2) !== 0 ){
                 return `<div class="ds-card">
-                <div class="ds-card-top" id="${items.id ? items.id : ""}">
+                <div class="ds-card-top ${items.class ? items.class : ''}" id="${items.id ? items.id : ""}">
                     <h1 class="ds-card-title">
                         ${items.title}
                     </h1>
@@ -164,7 +164,7 @@ class Content {
             else{
                 return `
                 <div class="ds-card">
-                    <div class="ds-card-top">
+                    <div class="ds-card-top ${items.class ? items.class : ''}">
                         <h1 class="ds-card-title">
                             ${items.title}
                         </h1>

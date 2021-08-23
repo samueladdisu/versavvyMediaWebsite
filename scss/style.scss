@@ -962,6 +962,7 @@
 }
 @include responsive($lg){
     .footer{
+        
         .footer-wrapper{
             .container{
                 display: grid;
@@ -1005,6 +1006,9 @@
 
 @include responsive($xl){
     .footer{
+        .wave{
+            margin-bottom: -8rem;
+        }
         .footer-wrapper{
             .container{
                 
@@ -1054,6 +1058,9 @@
 
 @include responsive($xxl){
     .footer{
+        .wave{
+            margin-bottom: -14rem;
+        }
         .footer-wrapper{
             .container{
                 .upper-footer{
