@@ -2454,7 +2454,7 @@ main .contact-form .bg .form button {
 
 @media screen and (min-width: 992px) {
   .solutions {
-    padding-bottom: 15.5rem;
+    padding-bottom: 0rem;
   }
   .solutions-card {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2485,6 +2485,10 @@ main .contact-form .bg .form button {
 .benefits .container {
   text-align: center;
   color: #fff;
+}
+
+.benefits .container .benefits-title {
+  margin-top: 0 !important;
 }
 
 .benefits .container .section-title {

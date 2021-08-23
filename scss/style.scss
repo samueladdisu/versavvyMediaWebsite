@@ -434,6 +434,7 @@
                     margin-bottom: 1rem;
                 }
             }
+           
             
         }
     }
@@ -450,7 +451,7 @@
 }
 @include responsive($lg){
     .solutions{
-        padding-bottom: 15.5rem;
+        padding-bottom: 0rem;
     }
     .solutions-card{
         grid-template-columns: 1fr 1fr 1fr;
@@ -482,7 +483,9 @@
     .container{
         text-align: center;
         color: #fff;
-        
+        .benefits-title{
+            margin-top: 0 !important;
+        }
         .section-title{
             color: #fff;
             padding-top: 3.19rem;
