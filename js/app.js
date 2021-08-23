@@ -70,7 +70,7 @@ let solutionCardContent = solutionCardData.map(item =>{
        <ul>
         ${item.list.map(lists =>{
            return `<li>
-           <img src="./assets/arrow-right.svg" alt="">
+           <img src="" alt="">
            ${lists}
         </li>` 
         }).join('')}

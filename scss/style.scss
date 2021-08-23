@@ -75,7 +75,14 @@
             
             li{
                 a{
-                    color: #000 !important;
+                    color: $primary-color !important;
+                  
+                }
+                &:hover {
+                    background-color: $primary-color;
+                }
+                &:hover a{
+                    color: #fff !important;
                 }
             }
 
@@ -84,6 +91,12 @@
             .drop-down-link{
                 position: absolute;
                 box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
+                background: rgb(240, 249, 255);
+                li{
+                    a{
+                        // color: rgb(255, 255, 255) !important;
+                    }
+                }
                 
             }
           }
@@ -741,7 +754,7 @@
 
 @include responsive($lg){
     .about{
-        margin-top: 17.75rem;
+        margin-top: 12.75rem;
         .container{
             .about-text{
                 .about-desc{
@@ -773,7 +786,7 @@
 }
 @include responsive($xxl){
     .about{
-        margin-top: 27.75rem;
+        margin-top: 20.75rem;
         .container{
             .about-text{
                 .about-desc{
