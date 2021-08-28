@@ -63,14 +63,14 @@ function footer(){
             <div class="address-content">
             <div>
                 <i class='bx bx-phone-call'></i>
-                <p>+251 11 557 4409</p>
+                <p> <a href="tel:+251115574409">+251 11 557 4409</a></p>
             </div>
 
             <div>
                 <i class='bx bx-envelope-open' ></i>
                 <aside>
-                    <p>info@versavvymedia.com</p>
-                    <p>sales@versavvymedia.com</p>
+                <p><a href="mailto:info@versavvymedia.com">info@versavvymedia.com</a> </p>
+                <p><a href="mailto:sales@versavvymedia.com">sales@versavvymedia.com</a></p>
                 </aside>
             </div>
 
