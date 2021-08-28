@@ -1862,11 +1862,13 @@ main .contact-info .contact-details .contact-content:last-child .text {
 
 main .contact-info .contact-details .contact-content .text {
   margin-left: 0.94rem;
+  font-size: 1.13rem;
   align-self: center;
 }
 
 main .contact-info .contact-details .contact-content .text p {
   margin-bottom: 0.75rem;
+  font-size: 1.13rem;
 }
 
 main .contact-info .contact-details .contact-content .bx {
@@ -1888,7 +1890,7 @@ main .contact-info .socials .social-icons {
 }
 
 main .contact-info .socials .social-icons a {
-  margin-right: 1rem;
+  margin-right: 1.85rem;
 }
 
 main .contact-info .socials .social-icons .bx {
