@@ -17,7 +17,7 @@ function header(){
                         <ul class="nav-links">
                             <li><a href="./index.html" class="scroll-link">HOME</a></li>
                             <li class="drop-down">
-                                <a href="#solutions" class="scroll-link solution"> SOLUTIONS <i class='bx bx-caret-down'></i> </a>
+                                <a href="#" class="scroll-link solution"> SOLUTIONS <i class='bx bx-caret-down'></i> </a>
                                 <ul class="drop-down-link">
                                     <li><a href="./ds.html">Digital Signage</a></li>
                                     <li><a href="./DM.html">Digital Marketing</a></li>

@@ -1,7 +1,6 @@
 @import "reboot";
 @import "mixins";
 @import "utilities";
-@import "dm";
 @import "ds";
 @import "broadcast";
 @import "storage";
@@ -9,6 +8,7 @@
 @import "service";
 @import "about";
 @import "contact";
+@import "dm";
 // header and navigation 
 
 
@@ -1087,7 +1087,7 @@
                         .address-content{
                             div{
                                 p{
-                                    font-size: 1.13rem;
+                                    font-size: 1rem;
                                     line-height: 1.82rem;
                                 }
                             }
@@ -1095,7 +1095,7 @@
                     }
                     .mission{
                         p{
-                            font-size: 1.13rem;
+                            font-size: 1rem;
                         }
                     }
                 }

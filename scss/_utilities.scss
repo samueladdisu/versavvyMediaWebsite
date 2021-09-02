@@ -116,6 +116,14 @@ html{
   background: $secondary-color;
   color: $primary-color;
 }
+.btn-rounded-primary {
+  background: $primary-color;
+  color: #fff;
+  border-radius: 2.56rem;
+  width: 11.5rem;
+  margin: 0 auto;
+  margin-top: 0.88rem;
+}
 .btn-secondary {
   color: #fff;
   background: $secondary-color;
