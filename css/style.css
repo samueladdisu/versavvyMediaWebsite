@@ -55,6 +55,7 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+  outline: none;
 }
 
 button,
@@ -1345,6 +1346,10 @@ html {
   right: 0;
 }
 
+.pros {
+  padding-bottom: 7.19rem;
+}
+
 .pros .container {
   position: relative;
 }
@@ -1361,6 +1366,7 @@ html {
 
 .pros .container .pro-content {
   margin-top: 3.19rem;
+  margin-bottom: 3.19rem;
 }
 
 .pros .container .pro-content .person {
@@ -2375,7 +2381,7 @@ main .contact-form .bg .form button {
   }
   .header .nav .header-container .links-container .nav-links li a {
     color: #fff;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .header .nav .header-container .links-container .nav-links li .black {
     color: #000;
@@ -2485,7 +2491,7 @@ main .contact-form .bg .form button {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   display: block;
   margin-top: 0.94rem;
   width: 4.38rem;
@@ -2655,7 +2661,7 @@ main .contact-form .bg .form button {
   padding: 1rem;
   background: #004063;
   color: #fff;
-  transition: height .3s linear;
+  transition: height 0.3s linear;
 }
 
 .solutions-card .card .card-content h3 {
@@ -2793,7 +2799,7 @@ main .contact-form .bg .form button {
   place-items: center;
   text-align: center;
   box-shadow: 2px 2px 44px rgba(0, 0, 0, 0.25);
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 2.44rem;
   margin-bottom: 3.5rem;
 }
@@ -2993,10 +2999,11 @@ main .contact-form .bg .form button {
   margin-bottom: 1rem;
 }
 
-.contact .container .contact-wrapper .form input, .contact .container .contact-wrapper .form textarea {
+.contact .container .contact-wrapper .form input,
+.contact .container .contact-wrapper .form textarea {
   width: 100%;
-  background: #F1F1F1;
-  border: 1px solid #DCDCDC;
+  background: #f1f1f1;
+  border: 1px solid #dcdcdc;
   box-sizing: border-box;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -3093,7 +3100,7 @@ main .contact-form .bg .form button {
   line-height: 1.63rem;
   letter-spacing: -0.035em;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer .footer-wrapper .container .upper-footer .mission .social-icons {
