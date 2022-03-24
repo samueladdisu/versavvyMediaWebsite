@@ -2258,6 +2258,57 @@ main .contact-form .bg .form button {
   }
 }
 
+.slick-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+.slick-slide img {
+  display: block;
+  filter: grayscale(1);
+}
+
+.slick-slide img:hover {
+  filter: grayscale(0);
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.copy {
+  padding-top: 250px;
+}
+
 .header {
   height: 7rem;
   background-color: #004063;
@@ -2451,30 +2502,22 @@ main .contact-form .bg .form button {
 }
 
 .logos .brands {
-  overflow-x: scroll;
+  padding: 2rem 0 3rem;
 }
 
-.logos .brands .container .logo-container {
-  width: 77.13rem;
-  margin: 0 auto;
-  padding-bottom: 2.13rem;
-  display: flex;
-  justify-content: space-between;
+.logos .brands .logo-container .item {
+  display: grid !important;
+  place-items: center !important;
 }
 
-.logos .brands .container .logo-container img {
-  margin-right: 3.69rem;
+.logos .brands .logo-container .item img {
+  display: block !important;
+  width: auto !important;
+  filter: grayscale(1);
 }
 
-@media screen and (min-width: 1200px) {
-  .logos .brands .logo-container {
-    width: 46.13rem;
-    display: flex;
-    overflow: visible;
-  }
-  .logos .brands .logo-container img {
-    margin-right: 0.69rem;
-  }
+.logos .brands .logo-container .item img:hover {
+  filter: grayscale(0);
 }
 
 .section-title {

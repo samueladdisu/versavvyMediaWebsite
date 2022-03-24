@@ -29,7 +29,7 @@ function header(){
                             </li>
                             <li><a href="./services.html" class="scroll-link">SERVICES</a></li>
                             <li><a href="./about.html" class="scroll-link">ABOUT US</a></li>
-                            <li><a href="./contact.html" class="scroll-link">CONTACT</a></li>
+                            <li><a href="./contact.php" class="scroll-link">CONTACT</a></li>
                         </ul>
 
                         </div>
@@ -102,7 +102,7 @@ function footer(){
             <ul>
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./services.html">SERVICES</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
+                <li><a href="./contact.php">CONTACT</a></li>
                 <li><a href="./about.html">ABOUT</a></li>
             </ul>
         </div>

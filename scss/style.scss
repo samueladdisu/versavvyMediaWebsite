@@ -9,6 +9,56 @@
 @import "about";
 @import "contact";
 @import "dm";
+// slick slider
+
+.slick-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.slick-list{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-track{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  img {
+    display: block;
+    filter: grayscale(1);
+    &:hover{
+      filter: grayscale(0);
+    }
+  }
+}
+.slick-initialized {
+  .slick-slide {
+    display: block;
+  }
+}
+
+.copy{
+  padding-top: 250px;
+}
+
 // header and navigation
 
 .header {
@@ -206,19 +256,20 @@
     justify-content: center;
   }
   .brands {
-    overflow-x: scroll;
-    .container {
+    padding: 2rem 0 3rem;
       .logo-container {
-        width: 77.13rem;
-        margin: 0 auto;
-        padding-bottom: 2.13rem;
-        display: flex;
-        justify-content: space-between;
-        //   overflow-x: scroll;
-        img {
-          margin-right: 3.69rem;
+        .item{
+          display: grid !important;
+          place-items: center !important;
+          img {
+            display: block !important;
+            width: auto !important;
+            filter: grayscale(1);
+            &:hover{
+              filter: grayscale(0);
+            }
+          }
         }
-      }
     }
   }
 }
@@ -226,12 +277,7 @@
   .logos {
     .brands {
       .logo-container {
-        width: 46.13rem;
-        display: flex;
-        overflow: visible;
-        img {
-          margin-right: 0.69rem;
-        }
+        
       }
     }
   }
